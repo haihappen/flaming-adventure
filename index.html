@@ -1,22 +1,20 @@
-<!DOCTYPE html>
 <html>
-<head>
-<meta charset=utf-8 />
-<title>A simple map</title>
-<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.js'></script>
-<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.css' rel='stylesheet' />
-<style>
-  body { margin:0; padding:0; }
-  #map { position:absolute; top:0; bottom:0; width:100%; }
-</style>
-</head>
+  <head>
+    <title>Node webkit + polymer example</title>
+      <script src="bower_components/platform/platform.js"></script>
+
+      <link rel="import" href="example-element/example-element.html">
+  </head>
 <body>
-<div id='map'></div>
-<script>
-L.mapbox.accessToken = 'pk.eyJ1IjoicmVhbTg4IiwiYSI6Im9XN3Q5NzgifQ.d4sG9L2iedF21qBuhBCwKw';
-var map = L.mapbox.map('map', 'examples.map-i86nkdio')
-    .setView([40, -74.50], 9);
-</script>
+  <div>In the body!</div>
+
+  <example-element> </example-element>
+
+  <script>
+    window.addEventListener('polymer-ready', function() {
+      var exampleElementInst = document.querySelector('example-element');
+      console.log("exampleElementInst",exampleElementInst);
+    });
+  </script>
 </body>
 </html>
