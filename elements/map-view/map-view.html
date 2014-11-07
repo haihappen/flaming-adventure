@@ -1,0 +1,33 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<script src="https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.js"></script>
+
+<polymer-element name="map-view">
+  <template>
+    <style>
+      #map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+    <link rel="stylesheet" href="https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.css">
+
+    <div id="map"></div>
+  </template>
+
+  <script>
+    Polymer("map-view", {
+      token: "pk.eyJ1IjoicmVhbTg4IiwiYSI6Im9XN3Q5NzgifQ.d4sG9L2iedF21qBuhBCwKw",
+
+      created: function() {
+        L.mapbox.accessToken = this.token;
+      },
+
+      ready: function() {
+        L.mapbox.map(this.$.map, "examples.map-i86nkdio")
+          .setView([40, -74.50], 9);
+      }
+    });
+  </script>
+</polymer>

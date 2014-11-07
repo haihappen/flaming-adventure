@@ -1,20 +1,22 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <title>Node webkit + polymer example</title>
-      <script src="bower_components/platform/platform.js"></script>
+  <meta charset=utf-8 />
+  <title>A Polymer map</title>
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
 
-      <link rel="import" href="example-element/example-element.html">
-  </head>
+  <script src="bower_components/platform/platform.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+
+  <link rel="import" href="elements/map-view/map-view.html">
+</head>
 <body>
-  <div>In the body!</div>
-
-  <example-element> </example-element>
-
-  <script>
-    window.addEventListener('polymer-ready', function() {
-      var exampleElementInst = document.querySelector('example-element');
-      console.log("exampleElementInst",exampleElementInst);
-    });
-  </script>
+  <map-view></map-view>
 </body>
 </html>
