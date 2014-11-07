@@ -1,0 +1,24 @@
+{
+  "name": "flaming-adventure",
+  "version": "1.0.0",
+  "description": "- [ ] Name :stuck_out_tongue: - [ ] Map (MapBox, alternative Google Maps) in WebKit container on - [ ] - Windows - [ ] - OS X - [ ] Map offline cache - [ ] App server, small VM (the same like kmspico :stuck_out_tongue:) with LEMP",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/haihappen/flaming-adventure.git"
+  },
+  "author": "Mario Uher <uher.mario@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/haihappen/flaming-adventure/issues"
+  },
+  "homepage": "https://github.com/haihappen/flaming-adventure",
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-download-atom-shell": "0.0.4",
+    "gulp-shell": "^0.2.10"
+  }
+}
