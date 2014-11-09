@@ -1,7 +1,7 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <script src="../../bower_components/mapbox.js/mapbox.js"></script>
 
-<polymer-element name="map-view">
+<polymer-element name="map-view" attributes="latitude longitude zoom">
   <template>
     <link rel="stylesheet" href="../../bower_components/mapbox.js/mapbox.css">
 
@@ -19,6 +19,11 @@
 
   <script>
     Polymer("map-view", {
+      // Center map on Linz
+      latitude: 48.303056,
+      longitude: 14.290556,
+      zoom: 13,
+
       token: "pk.eyJ1IjoicmVhbTg4IiwiYSI6Im9XN3Q5NzgifQ.d4sG9L2iedF21qBuhBCwKw",
 
       created: function() {
@@ -27,7 +32,7 @@
 
       ready: function() {
         L.mapbox.map(this.$.map, "examples.map-i86nkdio")
-          .setView([40, -74.50], 9);
+          .setView([this.latitude, this.longitude], this.zoom);
       }
     });
   </script>
