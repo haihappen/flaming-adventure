@@ -1,9 +1,11 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <script src="../../bower_components/mapbox.js/mapbox.js"></script>
+<script src="../../bower_components/leaflet.draw/dist/leaflet.draw.js"></script>
 
 <polymer-element name="map-view" attributes="latitude longitude zoom">
   <template>
     <link rel="stylesheet" href="../../bower_components/mapbox.js/mapbox.css">
+    <link rel="stylesheet" href="../../bower_components/leaflet.draw/dist/leaflet.draw.css">
 
     <style>
       #map {
@@ -24,6 +26,7 @@
       longitude: 14.290556,
       zoom: 13,
 
+      map: null,
       token: "pk.eyJ1IjoicmVhbTg4IiwiYSI6Im9XN3Q5NzgifQ.d4sG9L2iedF21qBuhBCwKw",
 
       created: function() {
@@ -31,7 +34,7 @@
       },
 
       ready: function() {
-        L.mapbox.map(this.$.map, "examples.map-i86nkdio")
+        this.map = L.mapbox.map(this.$.map, "examples.map-i86nkdio", { drawControl: true })
           .setView([this.latitude, this.longitude], this.zoom);
       }
     });
