@@ -3,4 +3,4 @@
 - [x] - Windows
 - [x] - OS X
 - [ ] Map offline cache
-- [ ] App server, small VM (the same like kmspico :stuck_out_tongue:) with LEMP
+- [ ] App server, small VM (the same like kmspico :stuck_out_tongue:) with LEMP, Docker and Vagrant, checkout https://spoon.net too
